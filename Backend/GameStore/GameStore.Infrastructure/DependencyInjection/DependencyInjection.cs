@@ -1,4 +1,6 @@
-﻿using GameStore.Infrastructure.Data.Context;
+﻿using GameStore.Domain.RepositoriesInterfaces.IGameRepositories;
+using GameStore.Infrastructure.Data.Context;
+using GameStore.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +18,8 @@ namespace GameStore.Infrastructure.DependencyInjection
 
            services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlite(connectionString));
+
+            services.AddScoped<IGameRepository, GameRepository>();
 
             return services;
         }

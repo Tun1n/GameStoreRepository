@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GameStore.Application\GameStore.Application.csproj" />
     <ProjectReference Include="..\GameStore.Domain\GameStore.Domain.csproj" />
     <ProjectReference Include="..\GameStore.Infrastructure\GameStore.Infrastructure.csproj" />

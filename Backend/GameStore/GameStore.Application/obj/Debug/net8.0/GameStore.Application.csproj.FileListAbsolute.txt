@@ -10,3 +10,9 @@ C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\refint\GameStore.Application.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.pdb
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\ref\GameStore.Application.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Domain.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Infrastructure.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Domain.pdb
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Infrastructure.pdb
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.csproj.AssemblyReference.cache
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStor.34E1C27F.Up2Date

@@ -136,3 +136,5 @@ C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debu
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
