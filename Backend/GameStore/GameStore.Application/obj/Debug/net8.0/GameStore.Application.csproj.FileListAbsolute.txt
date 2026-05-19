@@ -1,0 +1,12 @@
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Application.deps.json
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Application.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\bin\Debug\net8.0\GameStore.Application.pdb
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.AssemblyInfoInputs.cache
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.AssemblyInfo.cs
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.csproj.CoreCompileInputs.cache
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.sourcelink.json
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\refint\GameStore.Application.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\GameStore.Application.pdb
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.Application\obj\Debug\net8.0\ref\GameStore.Application.dll
