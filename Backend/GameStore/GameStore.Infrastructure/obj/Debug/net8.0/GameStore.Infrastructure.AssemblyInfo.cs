@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameStore.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2851ff5228dc0ea04ca0124b5f308ee7c1c1bd9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bb79aa57775800f604e85d3c01e7fbea73daff7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameStore.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameStore.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

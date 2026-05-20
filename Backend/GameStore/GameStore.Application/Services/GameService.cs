@@ -24,17 +24,17 @@ namespace GameStore.Application.Services
 
         public async Task<Result<GameCreateDTO>> AddAsync(GameCreateDTO game)
         {
-            var existingGame = _gameRepository.GetByNameAsync(game.Name);
-            if (existingGame is not null)
-            {
-                return Result<GameCreateDTO>.Failure("Game already exists.");
-            }
-
             var validacao = _gameCreateValidator.Validate(game);
             if (!validacao.IsValid)
             {
                 var errors = string.Join(", ", validacao.Errors.Select(e => e.ErrorMessage));
                 return Result<GameCreateDTO>.Failure(errors);
+            }
+
+            var existingGame = await _gameRepository.GetByNameAsync(game.Name); 
+            if (existingGame is not null)
+            {
+                return Result<GameCreateDTO>.Failure("Jogo já existe");
             }
 
             var newGame = new Game
@@ -55,11 +55,11 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<bool>.Failure("Game not found.");
+                return Result<bool>.Failure("Jogo não encontrado");
 
             await _gameRepository.DeleteAsync(id);
 
-            return Result<bool>.Ok(true, "Game deleted successfully.");
+            return Result<bool>.Ok(true, "Jogo deletado com sucesso");
         }
 
         public async Task<Result<GameGetDTO>> GetByIdAsync(int id)
@@ -67,7 +67,7 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<GameGetDTO>.Failure("Game not found.");
+                return Result<GameGetDTO>.Failure("Jogo não encontrado");
 
             var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL);
             return Result<GameGetDTO>.Ok(gameGetDTO);
@@ -78,7 +78,7 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByNameAsync(name);
 
             if (existingGame is null)
-                return Result<GameGetDTO>.Failure("Game not found.");
+                return Result<GameGetDTO>.Failure("Jogo não encontrado");
 
             var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL);
             return Result<GameGetDTO>.Ok(gameGetDTO);
@@ -90,7 +90,7 @@ namespace GameStore.Application.Services
 
             var result = new PagedResult<GameGetDTO>
             {
-                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL)),
+                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL)).ToList(),
                 TotalItems = total,
                 Page = pagination.PageNumber,
                 PageSize = pagination.PageSize
@@ -104,7 +104,7 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<GameUpdateDTO>.Failure("Game not found.");
+                return Result<GameUpdateDTO>.Failure("Jogo não encontrado");
 
             var validation = _gameUpdateValidator.Validate(newGame);
             if (!validation.IsValid)

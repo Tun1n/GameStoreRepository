@@ -48,6 +48,7 @@ namespace GameStore.Infrastructure.Repositories
             var total = await query.CountAsync();
 
             var items = await query
+                .OrderBy(game => game.Id)
                 .Skip((pagination.PageNumber - 1) * pagination.PageSize)
                 .Take(pagination.PageSize)
                 .ToListAsync();
@@ -57,13 +58,9 @@ namespace GameStore.Infrastructure.Repositories
 
         public async Task<Game> UpdateAsync(Game game)
         {
-            var existingGame = await _context.Games
-                .FirstOrDefaultAsync(c => c.Id == game.Id);
-
-            _context.Entry(existingGame!).CurrentValues.SetValues(game);
-
+            _context.Games.Update(game);
             await _context.SaveChangesAsync();
-            return existingGame!;
+            return game;
         }
     }
 }
