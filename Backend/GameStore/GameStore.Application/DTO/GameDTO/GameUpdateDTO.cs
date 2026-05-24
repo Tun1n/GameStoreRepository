@@ -4,5 +4,5 @@
     (
        string Name,
        string ImageURL,
-       bool IsInstaled);
+       bool IsInstalled);
 }

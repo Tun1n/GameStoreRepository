@@ -69,7 +69,7 @@ namespace GameStore.Application.Services
             if (existingGame is null)
                 return Result<GameGetDTO>.Failure("Jogo não encontrado");
 
-            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL);
+            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
             return Result<GameGetDTO>.Ok(gameGetDTO);
         }
 
@@ -80,7 +80,7 @@ namespace GameStore.Application.Services
             if (existingGame is null)
                 return Result<GameGetDTO>.Failure("Jogo não encontrado");
 
-            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL);
+            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
             return Result<GameGetDTO>.Ok(gameGetDTO);
         }
 
@@ -90,7 +90,7 @@ namespace GameStore.Application.Services
 
             var result = new PagedResult<GameGetDTO>
             {
-                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL)).ToList(),
+                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL, game.IsInstalled)).ToList(),
                 TotalItems = total,
                 Page = pagination.PageNumber,
                 PageSize = pagination.PageSize
@@ -115,12 +115,11 @@ namespace GameStore.Application.Services
 
             existingGame.Name = newGame.Name;
             existingGame.ImageURL = newGame.ImageURL;
-            existingGame.IsInstaled = newGame.IsInstaled;
+            existingGame.IsInstalled = newGame.IsInstalled;
 
             await _gameRepository.UpdateAsync(existingGame);
 
-            var updatedGame = new GameUpdateDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstaled);
-
+            var updatedGame = new GameUpdateDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
             return Result<GameUpdateDTO>.Ok(updatedGame);
         }
     }

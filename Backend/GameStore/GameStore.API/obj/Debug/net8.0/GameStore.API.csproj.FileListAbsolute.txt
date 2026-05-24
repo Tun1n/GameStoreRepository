@@ -63,7 +63,6 @@ C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debu
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\GameStor.26D12FD2.Up2Date
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\GameStore.API.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\refint\GameStore.API.dll
@@ -138,3 +137,4 @@ C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debu
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\slped\Desktop\GameStoreProject\Backend\GameStore\GameStore.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

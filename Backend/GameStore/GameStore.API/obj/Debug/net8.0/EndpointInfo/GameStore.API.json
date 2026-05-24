@@ -59,9 +59,55 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Game"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameCreateDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameCreateDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameCreateDTO"
+                }
+              }
+            }
+          }
+        }
       }
     },
-    "/{gameName}": {
+    "/Games/{gameName}": {
       "get": {
         "tags": [
           "Game"
@@ -234,54 +280,6 @@
           }
         }
       }
-    },
-    "/": {
-      "post": {
-        "tags": [
-          "Game"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GameCreateDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GameCreateDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GameCreateDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameCreateDTO"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameCreateDTO"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GameCreateDTO"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -310,6 +308,9 @@
           "imageURL": {
             "type": "string",
             "nullable": true
+          },
+          "isInstalled": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -325,7 +326,7 @@
             "type": "string",
             "nullable": true
           },
-          "isInstaled": {
+          "isInstalled": {
             "type": "boolean"
           }
         },

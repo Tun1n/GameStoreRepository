@@ -3,5 +3,6 @@
     public record GameGetDTO
     (
        string Name,
-       string ImageURL);
+       string ImageURL,
+       bool IsInstalled);
 }
