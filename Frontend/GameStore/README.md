@@ -37,8 +37,8 @@ GameStoreProject/
 ---
 
 ## ⚙️ Pré-requisitos
-- NodeJS
-- Npm
+- NodeJS ( 24.15.0 )
+- Npm ( 11.13.0 + )
 - Shadcn
 - React
 - Tailwind
