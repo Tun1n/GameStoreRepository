@@ -28,11 +28,11 @@ GameStoreProject/
 ---
 
 ## 🌍 Variáveis de Ambiente
-- Crie a variável de ambiente de string de conexão com o banco de dados SQLite dentro do sistema e configure na classe Dependeny Injection dentro da camada Infrastructure
+- Crie a variável de ambiente de string de conexão com o banco de dados SQLite dentro do sistema e configure na classe Dependency Injection dentro da camada Infrastructure
 
 ```
 var connectionString =
-                Environment.GetEnvironmentVariable("SUA_STRING_DE_CONEXAO", EnvironmentVariableTarget.Machine)
+                Environment.GetEnvironmentVariable("SUA_STRING_DE_CONEXAO")
                     ?? throw new ArgumentException("Invalid Connection String!!!");
 
            services.AddDbContext<AppDbContext>(options =>
@@ -45,12 +45,24 @@ var connectionString =
 - Realizar a instalação das dependências e aplicar as migrations via CLI
   
 ```bash
-# Entrar na pasta do projeto e baixar as dependências
-cd .\Backend\GameStore\
-dotnet restore
+# Instalar o EF Core versão 8 via terminal na pasta do projeto
+dotnet tool install --global dotnet-ef --version 8.0.8
+
+# Entrar nas pasta de cada camada no projeto e baixar as dependências
+- cd .\GameStore\GameStore.API\
+  dotnet restore
+- cd .\GameStore\GameStore.Domain\
+  dotnet restore
+- cd .\GameStore\GameStore.Infrastructure\
+  dotnet restore
+- cd .\GameStore\GameStore.Application\
+  dotnet restore
 
 # Entrar na camada GameStore (raiz) e aplicar
 dotnet ef database update --project GameStore.Infrastructure --startup-project GameStore.API
+
+# Conectar ao banco de dados
+Inserir o arquivo .db gerado na camada GameStore.Infrastructure ao DBeaver
 
 # Iniciar projeto na camada GameStore.API
 cd GameStore.API
@@ -91,4 +103,4 @@ deverá ser: "./Nome.extensão". Ex: "./Undertale.jpg"
 
 ## 👤 Autor
 
-Feito por **[Seu Nome](https://github.com/seu-usuario)**
+Feito por **[Antônio Pedro](https://github.com/Tun1n)**

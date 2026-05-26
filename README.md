@@ -21,9 +21,10 @@ Aplicação fullstack para gerenciamento e exibição de jogos digitais simuland
 ### Banco de Dados
 
 - [SQLite](https://www.sqlite.org/)
+- [DBeaver](https://dbeaver.io/download/)
 
 
 
 ## 👤 Autor
 
-Feito por **[Seu Nome](https://github.com/seu-usuario)**
+Feito por **[Antônio Pedro](https://github.com/Tun1n)**
