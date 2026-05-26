@@ -12,14 +12,17 @@ namespace GameStore.Application.Services
         private readonly IGameRepository _gameRepository;
         private readonly IValidator<GameCreateDTO> _gameCreateValidator;
         private readonly IValidator<GameUpdateDTO> _gameUpdateValidator;
+        private readonly IValidator<GamePatchDTO> _gamePatchValidator;
 
         public GameService(IGameRepository gameRepository, 
             IValidator<GameCreateDTO> gameCreateValidator, 
-            IValidator<GameUpdateDTO> gameUpdateValidator)
+            IValidator<GameUpdateDTO> gameUpdateValidator,
+            IValidator<GamePatchDTO> gamePatchValidator)
         {
             _gameRepository = gameRepository;
             _gameCreateValidator = gameCreateValidator;
             _gameUpdateValidator = gameUpdateValidator;
+            _gamePatchValidator = gamePatchValidator;
         }
 
         public async Task<Result<GameCreateDTO>> AddAsync(GameCreateDTO game)
@@ -121,6 +124,29 @@ namespace GameStore.Application.Services
 
             var updatedGame = new GameUpdateDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
             return Result<GameUpdateDTO>.Ok(updatedGame);
+        }
+
+        public async Task<Result<GamePatchDTO>> PartialUpdateAsync(int id, GamePatchDTO newgame)
+        {
+            var game = await _gameRepository.GetByIdAsync(id);
+            if (game == null)
+                return Result<GamePatchDTO>.Failure("Game not found.");
+
+            var validation = _gamePatchValidator.Validate(newgame);
+            if (!validation.IsValid)
+            {
+                var errors = string.Join(", ", validation.Errors.Select(e => e.ErrorMessage));
+                return Result<GamePatchDTO>.Failure(errors);
+            }
+
+
+            if (newgame.Name != null) game.Name = newgame.Name;
+            if (newgame.ImageURL != null) game.ImageURL = newgame.ImageURL;
+            if (newgame.IsInstalled != null) game.IsInstalled = newgame.IsInstalled.Value;
+
+            await _gameRepository.UpdateAsync(game);
+
+            return Result<GamePatchDTO>.Ok(new GamePatchDTO(game.Name, game.ImageURL, game.IsInstalled));
         }
     }
 }

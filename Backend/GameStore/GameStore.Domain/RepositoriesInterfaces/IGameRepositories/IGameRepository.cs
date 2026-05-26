@@ -6,6 +6,7 @@ namespace GameStore.Domain.RepositoriesInterfaces.IGameRepositories
     {
         Task AddAsync(Game game);
         Task<Game> UpdateAsync(Game game);
+        Task<Game> PartialUpdateAsync(Game game);
         Task DeleteAsync(int id);
         Task<Game?> GetByIdAsync(int id);
         Task<Game?> GetByNameAsync(string name);

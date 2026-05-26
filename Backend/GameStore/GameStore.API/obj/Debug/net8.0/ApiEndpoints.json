@@ -164,5 +164,36 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "GameStore.API.Controllers.GameController",
+    "Method": "PartialUpdateGame",
+    "RelativePath": "Games/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gamePatchDTO",
+        "Type": "GameStore.Application.DTO.GameDTO.GamePatchDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GameStore.Application.DTO.GameDTO.GamePatchDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

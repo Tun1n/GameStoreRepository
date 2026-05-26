@@ -56,6 +56,13 @@ namespace GameStore.Infrastructure.Repositories
             return (items, total);
         }
 
+        public async Task<Game> PartialUpdateAsync(Game game)
+        {
+            _context.Games.Update(game);
+            await _context.SaveChangesAsync();
+            return game;
+        }
+
         public async Task<Game> UpdateAsync(Game game)
         {
             _context.Games.Update(game);

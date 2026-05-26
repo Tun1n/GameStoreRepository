@@ -101,5 +101,22 @@ namespace GameStore.API.Controllers
             _logger.LogInformation("Game {Id} deleted", id);
             return Ok(new { message = "Game successfully deleted" });
         }
+
+        [HttpPatch("{id:int}")]
+        public async Task<ActionResult<GamePatchDTO>> PartialUpdateGame(int id, [FromBody] GamePatchDTO gamePatchDTO)
+        {
+            _logger.LogInformation($"Partially updating game: {gamePatchDTO.Name}");
+
+            var updated = await _gameService.PartialUpdateAsync(id, gamePatchDTO);
+
+            if (!updated.Success)
+            {
+                _logger.LogError("Error to partially update {Id}: {Message}", id, updated.Message);
+                return BadRequest(new { message = updated.Message });
+            }
+
+            _logger.LogInformation("Partial update!");
+            return Ok(updated.Data);
+        }
     }
 }

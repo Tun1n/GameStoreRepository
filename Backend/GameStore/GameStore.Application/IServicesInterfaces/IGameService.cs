@@ -9,6 +9,7 @@ namespace GameStore.Application.IServicesInterfaces
         Task<Result<GameCreateDTO>> AddAsync(GameCreateDTO game);
         Task<Result<bool>> DeleteAsync(int id);
         Task<Result<GameUpdateDTO>> UpdateAsync(int id, GameUpdateDTO newgame);
+        Task<Result<GamePatchDTO>> PartialUpdateAsync(int id, GamePatchDTO newgame);
         Task<Result<GameGetDTO>> GetByNameAsync(string name);
         Task<Result<GameGetDTO>> GetByIdAsync(int id);
         Task<Result<PagedResult<GameGetDTO>>> GetPagedAsync(PaginationParams pagination);
