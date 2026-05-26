@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata = {
-  title: "Meu Novo Projeto",
-  description: "Criado do zero",
+  title: "Game Store",
+  description: "Aplicação fullstack baseado na epic games",
 };
 
 export default function RootLayout({
