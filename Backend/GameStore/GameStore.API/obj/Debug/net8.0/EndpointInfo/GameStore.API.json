@@ -311,6 +311,10 @@
           },
           "isInstalled": {
             "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

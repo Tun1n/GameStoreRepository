@@ -34,7 +34,7 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByNameAsync(game.Name); 
             if (existingGame is not null)
             {
-                return Result<GameCreateDTO>.Failure("Jogo já existe");
+                return Result<GameCreateDTO>.Failure("Game already exists");
             }
 
             var newGame = new Game
@@ -55,11 +55,11 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<bool>.Failure("Jogo não encontrado");
+                return Result<bool>.Failure("Game not found");
 
             await _gameRepository.DeleteAsync(id);
 
-            return Result<bool>.Ok(true, "Jogo deletado com sucesso");
+            return Result<bool>.Ok(true, "Game successfully deleted");
         }
 
         public async Task<Result<GameGetDTO>> GetByIdAsync(int id)
@@ -67,9 +67,9 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<GameGetDTO>.Failure("Jogo não encontrado");
+                return Result<GameGetDTO>.Failure("Game not found");
 
-            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
+            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled, existingGame.Id);
             return Result<GameGetDTO>.Ok(gameGetDTO);
         }
 
@@ -78,9 +78,9 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByNameAsync(name);
 
             if (existingGame is null)
-                return Result<GameGetDTO>.Failure("Jogo não encontrado");
+                return Result<GameGetDTO>.Failure("Game not found");
 
-            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled);
+            var gameGetDTO = new GameGetDTO(existingGame.Name, existingGame.ImageURL, existingGame.IsInstalled, existingGame.Id);
             return Result<GameGetDTO>.Ok(gameGetDTO);
         }
 
@@ -90,7 +90,7 @@ namespace GameStore.Application.Services
 
             var result = new PagedResult<GameGetDTO>
             {
-                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL, game.IsInstalled)).ToList(),
+                Items = items.Select(game => new GameGetDTO(game.Name, game.ImageURL, game.IsInstalled, game.Id)).ToList(),
                 TotalItems = total,
                 Page = pagination.PageNumber,
                 PageSize = pagination.PageSize
@@ -104,7 +104,7 @@ namespace GameStore.Application.Services
             var existingGame = await _gameRepository.GetByIdAsync(id);
 
             if (existingGame is null)
-                return Result<GameUpdateDTO>.Failure("Jogo não encontrado");
+                return Result<GameUpdateDTO>.Failure("Game not found");
 
             var validation = _gameUpdateValidator.Validate(newGame);
             if (!validation.IsValid)
