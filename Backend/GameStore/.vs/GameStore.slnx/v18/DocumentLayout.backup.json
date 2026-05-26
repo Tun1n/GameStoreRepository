@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7E319A6-2461-7495-9690-A2A6F0E14112}|GameStore.Application\\GameStore.Application.csproj|c:\\users\\slped\\desktop\\gamestoreproject\\backend\\gamestore\\gamestore.application\\validators\\gamepatchdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7E319A6-2461-7495-9690-A2A6F0E14112}|GameStore.Application\\GameStore.Application.csproj|solutionrelative:gamestore.application\\validators\\gamepatchdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7E319A6-2461-7495-9690-A2A6F0E14112}|GameStore.Application\\GameStore.Application.csproj|c:\\users\\slped\\desktop\\gamestoreproject\\backend\\gamestore\\gamestore.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7E319A6-2461-7495-9690-A2A6F0E14112}|GameStore.Application\\GameStore.Application.csproj|solutionrelative:gamestore.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFBB7511-5220-172E-FE05-AA1321C715AF}|GameStore.API\\GameStore.API.csproj|c:\\users\\slped\\desktop\\gamestoreproject\\backend\\gamestore\\gamestore.api\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFBB7511-5220-172E-FE05-AA1321C715AF}|GameStore.API\\GameStore.API.csproj|solutionrelative:gamestore.api\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC5930C-B84C-3497-9AE7-8B17E909BB75}|GameStore.Infrastructure\\GameStore.Infrastructure.csproj|c:\\users\\slped\\desktop\\gamestoreproject\\backend\\gamestore\\gamestore.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC5930C-B84C-3497-9AE7-8B17E909BB75}|GameStore.Infrastructure\\GameStore.Infrastructure.csproj|solutionrelative:gamestore.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "GameStore.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "GameStore.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T17:03:13.679Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -39,45 +44,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GamePatchDTOValidator.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Application\\Validators\\GamePatchDTOValidator.cs",
-              "RelativeDocumentMoniker": "GameStore.Application\\Validators\\GamePatchDTOValidator.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Application\\Validators\\GamePatchDTOValidator.cs*",
-              "RelativeToolTip": "GameStore.Application\\Validators\\GamePatchDTOValidator.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T01:16:13.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "GameStore.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "GameStore.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T01:15:26.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.API\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "GameStore.API\\Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\GameStoreProject\\Backend\\GameStore\\GameStore.API\\Controllers\\GameController.cs",
-              "RelativeToolTip": "GameStore.API\\Controllers\\GameController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T01:13:51.361Z",
-              "EditorCaption": ""
             }
           ]
         },

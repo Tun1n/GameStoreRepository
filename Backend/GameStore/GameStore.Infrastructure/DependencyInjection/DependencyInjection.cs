@@ -13,7 +13,7 @@ namespace GameStore.Infrastructure.DependencyInjection
         {
 
             var connectionString =
-                Environment.GetEnvironmentVariable("SQLITE_CONNECTION", EnvironmentVariableTarget.Machine)
+                Environment.GetEnvironmentVariable("SQLITE_CONNECTION")
                     ?? throw new ArgumentException("Invalid Connection String!!!");
 
            services.AddDbContext<AppDbContext>(options =>
