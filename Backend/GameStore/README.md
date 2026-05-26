@@ -91,4 +91,4 @@ deverá ser: "./Nome.extensão". Ex: "./Undertale.jpg"
 
 ## 👤 Autor
 
-Feito por **[Seu Nome](https://github.com/seu-usuario)**
+Feito por **[Antônio Pedro](https://github.com/Tun1n)**
