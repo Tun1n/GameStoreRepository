@@ -12,16 +12,20 @@ import {
 import { Game } from "../Types/game";
 
 async function getGames(page = 1, pageSize = 12): Promise<Game[]> {
-  const res = await fetch(
-    `http://localhost:5046/Games?PageNumber=${page}&PageSize=${pageSize}`,
-    { next: { revalidate: 60 } }
-  );
+  try {
+    const res = await fetch(
+      `http://localhost:5046/Games?PageNumber=${page}&PageSize=${pageSize}`,
+      { next: { revalidate: 60 } }
+    );
 
-  if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    if (!res.ok) return [];
 
-  const json = await res.json();
+    const json = await res.json();
 
-  return Array.isArray(json) ? json : json.data ?? json.items ?? json.results ?? [];
+    return Array.isArray(json) ? json : json.data ?? json.items ?? json.results ?? [];
+  } catch {
+    return [];
+  }
 }
 
 export async function Sidebar() {

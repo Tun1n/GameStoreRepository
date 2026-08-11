@@ -8,18 +8,22 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 const PAGE_SIZE = 12;
 
 async function getGames(page = 1, pageSize = PAGE_SIZE): Promise<Game[]> {
-  const res = await fetch(
-    `http://localhost:5046/Games?PageNumber=${page}&PageSize=${pageSize}`,
-    { next: { revalidate: 60 } },
-  );
+  try {
+    const res = await fetch(
+      `http://localhost:5046/Games?PageNumber=${page}&PageSize=${pageSize}`,
+      { next: { revalidate: 60 } },
+    );
 
-  if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    if (!res.ok) return [];
 
-  const json = await res.json();
+    const json = await res.json();
 
-  return Array.isArray(json)
-    ? json
-    : (json.data ?? json.items ?? json.results ?? []);
+    return Array.isArray(json)
+      ? json
+      : (json.data ?? json.items ?? json.results ?? []);
+  } catch {
+    return [];
+  }
 }
 
 export default function GamesPage() {

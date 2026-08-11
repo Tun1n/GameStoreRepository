@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Sidebar } from "@/Components/Layout/sidebar";
 import { HeaderElements } from "@/Components/Layout/headerElements";
 import GamesPage from "@/Components/Layout/gamesReturn";
@@ -28,7 +29,9 @@ export default function Home() {
         </header>
 
         <main className="p-4 sm:p-6">
-          <GamesPage />
+          <Suspense fallback={null}>
+            <GamesPage />
+          </Suspense>
         </main>
       </div>
     </div>
